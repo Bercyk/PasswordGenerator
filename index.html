@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="section-one">
+            <h1 class="main-text">Generate a <aside class="green-highlight">random password</aside></h1>
+            <p class="some-text">Never use an insecure password again.</p>
+        </div>
+        <div class="section-two">
+            <button class="button-generate" onclick="startGenerate()"><img src="img/icon.png" class="icon">Generate password</button>
+            <div class="strength-picker">
+                <button class="button-subtract" onclick="subtractStrength()">-</button>
+                <input id="strength-el" type="number" class="strength-number" value="10" readonly>
+                <button class="button-add" onclick="addStrength()">+</button>
+            </div>    
+        </div>
+        <hr class="split-line">
+        <div class="section-three">
+            <div class="rows">
+                <div class="cell"><input id="password-el-one" type="text" class="cell-text" onclick="copyPassword()" readonly></div>
+                <div class="cell"><input id="password-el-two" type="text" class="cell-text" onclick="copyPassword()" readonly></div>
+            </div>
+            <div class="rows">
+                <div class="cell"><input id="password-el-three" type="text" class="cell-text" onclick="copyPassword()" readonly></div>
+                <div class="cell"><input id="password-el-four"  type="text" class="cell-text" onclick="copyPassword()" readonly></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/index.js"></script>
+</html>
